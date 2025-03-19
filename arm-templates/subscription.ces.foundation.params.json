@@ -1,0 +1,65 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2018-05-01/subscriptionDeploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "mspOfferName": {
+            "value": "Parallo lighthouse with PIM"
+        },
+        "mspOfferDescription": {
+            "value": "Lighthouse with PIM offering for Parallo"
+        },
+        "managedByTenantId": {
+            "value": "ad44a83d-cd78-477e-8fcf-a1d97ae89c5d"
+        },
+        "authorizations": {
+            "value": [
+                {
+                    "principalId": "9f63a285-e42b-4513-ae11-81a71a743cba",
+                    "roleDefinitionId": "acdd72a7-3385-48ef-bd42-f606fba81ae7", 
+                    "principalIdDisplayName": "Parallo Readers"
+                },
+                {
+                    "principalId": "ba206bf2-58e6-40b8-a70a-203b25aacfc7",
+                    "roleDefinitionId": "acdd72a7-3385-48ef-bd42-f606fba81ae7", 
+                    "principalIdDisplayName": "Parallo Admins"
+                },
+                {
+                    "principalId": "ba206bf2-58e6-40b8-a70a-203b25aacfc7",
+                    "roleDefinitionId": "cfd33db0-3dd1-45e3-aa9d-cdbdf3b6f24e", 
+                    "principalIdDisplayName": "Parallo Admins"
+                }
+            ]
+        },
+        "eligibleAuthorizations": {
+            "value": [
+                {
+                    "justInTimeAccessPolicy": {
+                        "multiFactorAuthProvider": "Azure",
+                        "maximumActivationDuration": "PT8H"
+                    },
+                    "principalId": "ba206bf2-58e6-40b8-a70a-203b25aacfc7",
+                    "principalIdDisplayName": "Parallo Admins",
+                    "roleDefinitionId": "b24988ac-6180-42a0-ab88-20f7382dd24c" 
+                },
+                {
+                    "justInTimeAccessPolicy": {
+                        "multiFactorAuthProvider": "Azure",
+                        "maximumActivationDuration": "PT8H"
+                    },
+                    "principalId": "ba206bf2-58e6-40b8-a70a-203b25aacfc7",
+                    "principalIdDisplayName": "Parallo Admin",
+                    "roleDefinitionId": "36243c78-bf99-498c-9df9-86d9f8d28608" 
+                },
+                {
+                    "justInTimeAccessPolicy": {
+                        "multiFactorAuthProvider": "Azure",
+                        "maximumActivationDuration": "PT8H"
+                    },
+                    "principalId": "ba206bf2-58e6-40b8-a70a-203b25aacfc7",
+                    "principalIdDisplayName": "Parallo Admin",
+                    "roleDefinitionId": "91c1777a-f3dc-4fae-b103-61d183457e46" 
+                }
+            ]
+        }
+    }
+}
