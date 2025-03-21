@@ -1,48 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join CES Fondation</title>
-    <style>
-        .deploy-button {
-            background-color: #0078D4;
-            color: white;
-            padding: 10px 15px;
-            font-size: 18px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .deploy-button:hover {
-            background-color: #005A9E;
-        }
-        .button-container {
-            display: flex;
-            justify-content: center;
-            margin-top: 50px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join CES Fondation</title>
+  <style>
+    .deploy-button {
+      background-color: #0078D4;
+      color: white;
+      padding: 10px 15px;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .deploy-button:hover {
+      background-color: #005A9E;
+    }
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="button-container">
-        <button class="deploy-button" onclick="deployToAzure()">
-            <img src="https://aka.ms/deploytoazurebutton" alt="Join CES Fondation" width="150">
-        </button>
-    </div>
+  <div class="button-container">
+    <button class="deploy-button" onclick="deployToAzure()">
+      <img src="https://aka.ms/deploytoazurebutton" alt="Join CES Fondation" width="150">
+    </button>
+  </div>
 
-    <script>
-        function deployToAzure() {
-            const templateUrl = encodeURIComponent("https://raw.githubusercontent.com/prateekbansalbyparallo/parallo-ces-offering/refs/heads/main/arm-templates/subscription.json");
-            const parametersUrl = encodeURIComponent("https://raw.githubusercontent.com/prateekbansalbyparallo/parallo-ces-offering/refs/heads/main/arm-templates/subscription.ces.foundation.params.json");
-            const deployUrl = `https://portal.azure.com/#create/Microsoft.Template/uri/${templateUrl}?parameter-uri=${parametersUrl}`;
-            window.open(deployUrl, "_blank");
-        }
-    </script>
+  <script>
+    function deployToAzure() {
+      // Use your merged ARM template URL
+      const templateUrl = encodeURIComponent("https://raw.githubusercontent.com/prateekbansalbyparallo/parallo-ces-offering/refs/heads/main/arm-templates/sub-ces-foundation.json");
+      const deployUrl = `https://portal.azure.com/#create/Microsoft.Template/uri/${templateUrl}`;
+      window.open(deployUrl, "_blank");
+    }
+  </script>
 
 </body>
 </html>
